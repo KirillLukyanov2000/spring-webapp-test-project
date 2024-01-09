@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:musician.properties"/>
+
+    <bean id="myBean" class="ru.lukyanov.entity.testBean.MyBean">
+        <constructor-arg value="Kirill"/>
+    </bean>
+    <bean name="musician" class="ru.lukyanov.entity.music.performer.Musician">
+        <property name="name" value="${musician.name}"/>
+        <property name="hasExperience" value="${musician.hasExperience}"/>
+    </bean>
+
+    <bean id="classicalMusic" class="ru.lukyanov.entity.music.ClassicalMusic">
+        <property name="musicInstrument" value="PIANO"/>
+        <property name="musician" ref="musician"/>
+    </bean>
+    <bean name="singer" class="ru.lukyanov.entity.music.performer.Singer">
+        <property name="name" value="Jonny"/>
+        <property name="bandName" value="Old Monks"/>
+    </bean>
+    <bean id="rockMusic" class="ru.lukyanov.entity.music.RockMusic">
+        <property name="singer" ref="singer"/>
+    </bean>
+    <bean id="musicPlayer" class="ru.lukyanov.service.MusicPlayer">
+        <constructor-arg ref="classicalMusic"/>
+    </bean>
+
+
+</beans>
