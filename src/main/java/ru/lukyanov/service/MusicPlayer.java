@@ -9,9 +9,6 @@ import ru.lukyanov.entity.music.Music;
 public class MusicPlayer {
     private String name;
     private int volume;
-
-
-    //@Qualifier("classicalMusic")
     private Music music;
 
     public MusicPlayer(Music music) {

@@ -1,6 +1,6 @@
 package ru.lukyanov.entity.music;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import ru.lukyanov.entity.music.performer.Musician;
 
 public class ClassicalMusic implements Music {

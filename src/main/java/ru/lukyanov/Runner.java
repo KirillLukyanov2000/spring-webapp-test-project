@@ -2,10 +2,11 @@ package ru.lukyanov;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import ru.lukyanov.entity.componenttestbean.MyComponentBean;
 import ru.lukyanov.entity.music.ClassicalMusic;
 import ru.lukyanov.entity.music.RockMusic;
 import ru.lukyanov.entity.music.performer.Musician;
-import ru.lukyanov.entity.testbean.MyBean;
+import ru.lukyanov.entity.xmltestbean.MyXmlBean;
 import ru.lukyanov.service.MusicPlayer;
 
 @Slf4j
@@ -13,8 +14,11 @@ public class Runner {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        MyBean myBean = context.getBean("myBean", MyBean.class);
-        log.info(myBean.getName());
+        MyXmlBean myXmlBean1 = context.getBean("myBean", MyXmlBean.class);
+        log.info("My Xml bean name is {}", myXmlBean1.getName());
+        MyXmlBean myXmlBean2 = context.getBean("myBean", MyXmlBean.class);
+        myXmlBean2.setName("Kirs");
+        log.info("My Xml bean name is {}", myXmlBean2.getName());
 
 
         ClassicalMusic classicalMusic = context.getBean(ClassicalMusic.class);
@@ -28,8 +32,12 @@ public class Runner {
 
         Musician musician2 = context.getBean(Musician.class);
         musician2.setName("Alexey");
-        log.info(musician2.getName());
+        log.info("Musician name is {}", musician2.getName());
 
+
+        MyComponentBean componentBean = context.getBean(MyComponentBean.class);
+        log.info("My Component bean name is {}", componentBean.getName());
+        log.info("Checking my Autowired Bean {}", componentBean.getMyAutowiredBean().getClass().getSimpleName());
         context.close();
 
     }
