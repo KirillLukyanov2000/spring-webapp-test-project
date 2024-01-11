@@ -1,9 +1,11 @@
 package ru.lukyanov.service;
 
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import ru.lukyanov.entity.music.Music;
 
 @Data
+@Slf4j
 public class MusicPlayer {
     private String name;
     private int volume;
@@ -21,6 +23,7 @@ public class MusicPlayer {
     }
 
     public void playMusic() {
-        System.out.println("Playing: " + music.getSong());
+        log.info("Playing: {}", music.getSong());
+
     }
 }
