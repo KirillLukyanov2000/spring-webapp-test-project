@@ -7,11 +7,10 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:component-scan base-package="ru.lukyanov"/>
     <context:property-placeholder location="classpath:musician.properties"/>
-    <context:property-placeholder location="classpath:myComponentBean.properties"/>
-        <context:component-scan base-package="ru.lukyanov"/>
 
-    <bean id="myBean" class="ru.lukyanov.entity.xmltestbean.MyXmlBean"
+    <bean id="myXmlBean" class="ru.lukyanov.entity.xmltestbean.MyXmlBean"
           init-method="doMyInit" destroy-method="doMyDestroy" factory-method="getMyBean">
         <constructor-arg value="Kirill"/>
     </bean>
@@ -19,9 +18,7 @@
           init-method="doMusicianInit" destroy-method="doMusicianDestroy">
         <property name="name" value="${musician.name}"/>
         <property name="hasExperience" value="${musician.hasExperience}"/>
-
     </bean>
-
     <bean id="classicalMusic" class="ru.lukyanov.entity.music.ClassicalMusic">
         <property name="musicInstrument" value="PIANO"/>
         <property name="musician" ref="musician"/>
@@ -36,6 +33,4 @@
     <bean id="musicPlayer" class="ru.lukyanov.service.MusicPlayer">
         <constructor-arg ref="classicalMusic"/>
     </bean>
-
-
 </beans>

@@ -13,11 +13,11 @@ public class MyXmlBean {
     }
 
     public void doMyInit() {
-        log.warn(">>> Init testBean named {}", name);
+        log.warn(">>> Init testXmlBean named {}", name);
     }
 
     public void doMyDestroy() {
-        log.warn(">>> Destroy testBean named {}", name);
+        log.warn(">>> Destroy testXmlBean named {}", name);
     }
 
     public static MyXmlBean getMyBean(String name) {
