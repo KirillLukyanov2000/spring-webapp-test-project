@@ -2,7 +2,6 @@ package ru.lukyanov;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import ru.lukyanov.entity.componenttestbean.MyAutowiredBeanImpl2;
 import ru.lukyanov.entity.componenttestbean.MyComponentBean;
 import ru.lukyanov.entity.music.ClassicalMusic;
 import ru.lukyanov.entity.music.MusicInstrument;
