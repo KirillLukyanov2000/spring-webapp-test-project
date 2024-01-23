@@ -1861,8 +1861,6 @@ n
 >src/main/java/ru/lukyanov/controller/CalculatorController.java,e\0\e0a0c4c4e8687f39bc1acfae8519942ebde5ad88
 ^
 .src/main/webapp/WEB-INF/views/second/calc.html,7\d\7d40301edec494f5270be9a5e493c60baff106a3
-X
-(src/main/java/ru/lukyanov/Operation.java,c\b\cbba87f5c0a7fdb052a8f81cc72e1798f27c5ce3
 ^
 .src/main/java/ru/lukyanov/enums/Operation.java,a\0\a06754d151ec057644f5888780bcbd3f90542ebf
 w
@@ -2173,10 +2171,6 @@ Q.idea/sonarlint/securityhotspotstore/d/6/d6025d552ca97e766315de178124293f495dd8
 Q.idea/sonarlint/securityhotspotstore/d/6/d65c8dac32d91317530bd6e47ad44d3aaebaade0,2\1\21e0ce7cfa22bac52f1c8796cd856b9948d2ceee
 w
 G.idea/sonarlint/issuestore/7/d/7d40301edec494f5270be9a5e493c60baff106a3,d\2\d2ce4c1bd56a132c4563cccb867a4d8128bf1320
-Å
-Q.idea/sonarlint/securityhotspotstore/c/b/cbba87f5c0a7fdb052a8f81cc72e1798f27c5ce3,5\1\51d03c3ad8e05a998cc19a0638e7bce618b5c920
-w
-G.idea/sonarlint/issuestore/c/b/cbba87f5c0a7fdb052a8f81cc72e1798f27c5ce3,6\d\6d55016f379454da3fc4ae58ec81835b7dca345a
 Å
 Q.idea/sonarlint/securityhotspotstore/a/0/a06754d151ec057644f5888780bcbd3f90542ebf,8\c\8caf19b30844ffd9bb62bbb4d10df3fbf14ee682
 Å
@@ -3757,3 +3751,5 @@ w
 G.idea/sonarlint/issuestore/3/b/3b70156605e944c82fe77b27df68aa9027be6648,3\7\37525b785954750c31b3e7fd436ce0da24ff835e
 w
 G.idea/sonarlint/issuestore/3/b/3b740e5988951f29b42af64b770fe733d41f159c,1\1\1139457a97f07dc2471135d5ff637ea6c9b9c710
+J
+src/main/webapp/index2.jsp,3\5\35c4553044f15c9281a629720b6ec85aff5a0921

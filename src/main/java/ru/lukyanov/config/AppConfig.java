@@ -57,6 +57,5 @@ public class AppConfig implements WebMvcConfigurer {
         return new Random();
     }
 
-
 }
 
